@@ -6,3 +6,6 @@ No Config
 Dont Come To Me If U Edited The Script And It Is not Working
 
 Requirements:ESX
+
+Credits:Axis,Modiji
+
