@@ -91,8 +91,10 @@ Citizen.CreateThread(function ()
             if (IsControlJustReleased(1, 51)) then
                 ESX.TriggerServerCallback('gc_vehicleshop:buy', function(canbuy)
                     if canbuy then
+			plate = exports['gc_vehicleshop']:GeneratePlate()					
                         ESX.Game.SpawnVehicle(nearveh,vector3(-48.6258, -1076.00, 26.10), 60*1.0, function(vehicle)
                             TaskWarpPedIntoVehicle(GetPlayerPed(-1), vehicle, -1)
+			SetVehicleNumberPlateText(vehicle,plate)
                             TriggerServerEvent('garage:addKeys', GetVehicleNumberPlateText(vehicle))
                             BuyVehicle(vehicle)
                         end)
